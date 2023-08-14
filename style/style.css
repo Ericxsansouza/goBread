@@ -1,9 +1,10 @@
+@import url(style-global.css);
+
 header {
     background-color: var(--cor-white);
     width: 100%;
+    height: 80px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     position: fixed;
     top: 0;
 }
@@ -14,17 +15,24 @@ header.sticky {
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.074), 0 6px 20px 0 rgba(0, 0, 0, 0);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.015), 0 6px 20px 0 rgba(0, 0, 0, 0);
     border-bottom: 1px solid #f4f4f4;
+    background-color: var(--cor-white);
     z-index: 2;
     width: 100%;
     position: fixed;
 }
 
-nav {
+.content-navbar{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    margin-top: 0.9rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 50px;
-    padding: 0 10px;
 }
 
 nav a {
@@ -73,17 +81,19 @@ nav span {
         padding: 10px 0;
     }
 
-    nav {
+    .content-navbar {
+        flex-direction: column;
         gap: 20px;
+        padding: 10px 0;
     }
 
-    nav a::after {
-        bottom: -5px;
+    nav {
+        gap: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    header {
+    header {     
         gap: 10px; 
         padding: 5px 0; 
     }
@@ -93,11 +103,24 @@ nav span {
         align-items: center; 
     }
 
-    nav a::after {
-        bottom: -3px;
+    .contentAccess {
+        gap: 10px;
     }
 
     nav a, nav span {
         font-size: 14px;
     }
 }
+
+ /* header.sticky nav a,
+ header.sticky nav span {
+     color: #000;
+ }
+
+
+ header.sticky nav a::after {
+     background-color: #FF0000;
+ } */
+ 
+/* FIM DA NAVBAR COM RESPONSIVIDADE */
+
